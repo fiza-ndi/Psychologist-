@@ -6,6 +6,7 @@
     <title>Psychologist Website</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -32,11 +33,16 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-nav" id="mobileNav">
+
+    <!-- CLOSE ICON -->
+    <div class="close-btn" id="closeBtn">✖</div>
+
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="Resources.html">Resources</a>
-    <a href="booking.html" class="header-btn mobile-btn">Book Session</a>
+
+    <a href="booking.html" class="header-btn">Book Session</a>
 </div>
 
 
@@ -206,17 +212,27 @@
     </div>
 
     <div class="footer-section contact">
-        <h3>Contact</h3>
-        <p>📍 Faisalabad, Pakistan</p>
-        <p>📞 +923464867673</p>
-        <p>📧 support@example.com</p>
-        
-        <div class="footer-social">
-            <a href="#">🌐</a>
-            <a href="#">📘</a>
-            <a href="#">📸</a>
-            <a href="#">▶️</a>
-        </div>
+    <h3>Contact</h3>
+
+    <p><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</p>
+    <p><i class="fa-solid fa-phone"></i> +92 346 4867673</p>
+    <p><i class="fa-solid fa-envelope"></i> support@example.com</p>
+    
+    <div class="footer-social">
+        <a href="https://www.facebook.com/muhammad.nadeem.405722?mibextid=ZbWKwL" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter / X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+    </div>
+</div>
     </div>
 
 </footer>
@@ -243,6 +259,24 @@
     }, {threshold: 0.12});
     document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
   })();
+
+
+
+
+
+  // Close menu by cross
+  closeBtn.addEventListener("click", () => {
+    mobileNav.classList.remove("open");
+  });
+
+  // Close menu when clicking any link
+  document.querySelectorAll(".mobile-nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+    });
+  });
+
+
 </script>
 
 </body>

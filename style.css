@@ -589,137 +589,7 @@
 
 
 
-/* SECTION */
-.max-w-7xl {
-  max-width: 1280px;
-}
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-.flex {
-  display: flex;
-}
-.flex-col {
-  flex-direction: column;
-}
-.lg\:flex-row {
-  flex-direction: row;
-}
-.items-center {
-  align-items: center;
-}
-.gap-16 {
-  gap: 4rem;
-}
 
-/* LEFT CONTENT */
-.flex-1 {
-  flex: 1;
-}
-.space-y-6 > * + * {
-  margin-top: 1.5rem;
-}
-
-/* HEADING */
-.text-4xl {
-  font-size: 2.5rem;
-}
-.md\:text-5xl {
-  font-size: 3rem;
-}
-.font-bold {
-  font-weight: 700;
-}
-.leading-tight {
-  line-height: 1.2;
-}
-.text-\#5e02599c {
-  color: #350632;
-}
-
-/* PARAGRAPH */
-.text-lg {
-  font-size: 1.125rem;
-}
-.text-gray-600 {
-  color: #000000;
-}
-.max-w-lg {
-  max-width: 32rem;
-}
-
-/* BUTTONS */
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-.bg-primary {
-  background: #5e0259;
-}
-.text-white {
-  color: #fff;
-}
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-.shadow-md {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-.bg-primaryDark {
-  background: #460043;
-}
-
-.bg-white {
-  background: #ffffff;
-}
-.border {
-  border-width: 1px;
-}
-.border-gray-200 {
-  border-color: #e5e7eb;
-}
-.shadow-sm {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-.bg-gray-50:hover {
-  background-color: #f9fafb;
-}
-.transition {
-  transition: 0.3s;
-}
-.hover\:bg-primaryDark:hover {
-  background: #460043;
-}
-
-/* LABEL TAG */
-.bg-gray-100 {
-  background: #f3f4f6;
-}
-.rounded-full {
-  border-radius: 9999px;
-}
-.text-sm {
-  font-size: 0.875rem;
-}
-.items-center {
-  align-items: center;
-}
-.mt-6 {
-  margin-top: 1.5rem;
-}
 
 /* EXPERIENCE TEXT */
 .font-bold {
@@ -825,4 +695,185 @@
     .service-card {
         max-width: 320px;
     }
+}
+
+
+
+.info-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;   /* mobile ke liye */
+}
+
+.status-pill {
+  padding: 4px 16px;
+  background: #f3f4f6;
+  border-radius: 999px;
+  font-size: 14px;
+  white-space: nowrap;  /* text ek line me */
+}
+
+.info-text {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+  .info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-text {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .sub {
+    font-size: 12px;
+  }
+}
+.icon i {
+  font-size: 40px;
+  color: #ff9100;
+}
+
+.info-card h4 i {
+  margin-right: 8px;
+  color:  #ff9100;
+}
+
+.info-card ul li i {
+  margin-right: 6px;
+  color:  #ff9100;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  height: 100%;                 /* same height */
+  min-height: 320px;            /* equal box size */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.about-image {
+  max-width: 380px;   /* image container size */
+  margin-right: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;  /* image height control */
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-image {
+    max-width: 320px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    min-height: auto;
+  }
+
+  .about-image {
+    max-width: 260px;
+  }
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 20px 22px;
+  border-radius: 16px;
+
+  /* IMPORTANT FIX */
+  height: auto;
+  min-height: unset;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+}
+.info-card h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.info-card ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.info-card ul li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.info-card h4 i {
+  font-size: 18px;
+}
+
+.info-card ul li i {
+  font-size: 14px;
+}
+@media (max-width: 992px) {
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.service-icon i {
+  font-size: 42px;
+  color:  #ff9100;
+  margin-bottom: 15px;
+}
+
+.service-card {
+  text-align: center;
 }

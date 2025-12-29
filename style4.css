@@ -247,3 +247,7 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.card .icon i {
+  font-size: 32px;
+  color:#ffa600;
+}
