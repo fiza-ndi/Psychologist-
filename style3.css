@@ -494,3 +494,12 @@
   font-size: 28px;
   color:#ffa600;
 }
+
+
+
+@media (max-width: 768px){
+  .hero-cta{
+    display: flex;
+    justify-content: center;
+  }
+}

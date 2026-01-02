@@ -65,7 +65,7 @@
     display: none;
     font-size: 1.9rem;
     cursor: pointer;
-    color:  #5e02599c;
+    color:  #3a004f;
 }
 
 /* MOBILE MENU */
@@ -307,14 +307,14 @@ body {
 
 
 /* CLOSE BUTTON */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 1.6rem;
-    cursor: pointer;
-    color: #5e0259;
+.close-btn{
+  position: absolute;
+  top: 15px;
+  left: 15px;   /* left side */
+  font-size: 20px;
+  cursor: pointer;
 }
+
 .footer-section p i {
   margin-right: 8px;
   color:  #ffa600;
