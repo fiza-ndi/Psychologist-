@@ -254,70 +254,88 @@ h2 {
 
 
 
+
 .hero-text {
-  max-width: 700px;          /* content width limit */
-  margin: 100px auto 50px;   /* top, center, bottom spacing */
-  text-align: center;         /* center heading + paragraph + button */
-  padding: 0 20px;            /* side padding for mobile */
+  max-width: 720px;                 
+  margin: clamp(50px, 12vh, 120px) auto 60px; /* 🔑 large screens fix */
+  text-align: center;
+  padding: 0 24px;
   animation: fadeIn 1s ease-in-out;
 }
 
+/* ===== Heading ===== */
 .hero-text h1 {
-  font-weight: 800;
-  font-size: clamp(32px, 6vw, 48px); /* responsive heading */
-  line-height: 1.3;
-  margin-bottom: 20px;
-  color: #3a004f;             /* dark teal color */
+  white-space: nowrap;      /* 🔑 line break band */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* chhoti screen par ... aa jayega */
 }
 
+
+/* ===== Paragraph ===== */
 .hero-text p {
-  font-size: clamp(16px, 3vw, 20px);  /* responsive paragraph */
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #333;                      /* paragraph color */
+  max-width: 620px;                 /* 🔑 readability on big screens */
+  margin: 0 auto 32px;
+  font-size: clamp(16px, 2vw, 20px); /* 🔑 FIXED (6vw was too big) */
+  line-height: 1.7;
+  color: #333;
 }
 
+/* ===== Button ===== */
 .hero-text .btn-primary {
   display: inline-block;
-  background-color: linear-gradient(#5f1353, #922a78);  /* button color */
+  background: linear-gradient(135deg, #5f1353, #922a78); /* 🔑 gradient FIX */
   color: #fff;
-  padding: 12px 30px;
-  border-radius: 8px;
+  padding: 14px 34px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .hero-text .btn-primary:hover {
-  background-color: #ffa600;
+  background:  #ffa600;
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(146, 42, 120, 0.3);
 }
 
-/* FadeIn animation */
+/* ===== Fade Animation ===== */
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Mobile adjustments */
+/* ===== Mobile Adjustments ===== */
 @media (max-width: 768px) {
   .hero-text {
     margin: 70px auto 40px;
+    padding: 0 20px;
   }
 
   .hero-text h1 {
-    font-size: clamp(24px, 8vw, 36px);  /* adjust smaller screens */
-    margin-bottom: 15px;
+    font-size: clamp(26px, 7vw, 36px);
+    margin-bottom: 14px;
   }
 
   .hero-text p {
     font-size: clamp(14px, 4vw, 18px);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .hero-text .btn-primary {
-    padding: 10px 25px;
+    padding: 12px 26px;
   }
 }
-
-
+/* Tablet & mobile: allow wrapping */
+@media (max-width: 992px){
+  .hero-text h1{
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
