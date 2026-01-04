@@ -337,3 +337,36 @@ body {
   background:  #ffa600;
   color: #ffffff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for logo and text */
+.premium-header .header-left {
+    display: flex;
+    align-items: center; /* vertically center */
+            /* space between text and logo */
+}
+
+/* Logo text */
+.premium-header .Logo {
+    font-size: 20px;      /* text size */
+    font-weight: bold;    /* bold text */
+    color: #0d4a4a;       /* change color as needed */
+}
+
+/* Logo image */
+.premium-header .header-left img {
+    width: 60px;          /* logo width */
+    height: auto;         /* maintain aspect ratio */
+    display: block;
+}

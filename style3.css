@@ -503,3 +503,175 @@
     justify-content: center;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+.page-hero {
+  padding: 90px 8%;
+  background: #f7f8fb;
+}
+
+.page-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* TEXT */
+.page-hero-text {
+  max-width: 520px;
+}
+
+.page-hero-text h1 {
+  font-size: clamp(36px, 4vw, 48px);
+  line-height: 1.15;
+  color: #5e0259;
+  margin-bottom: 18px;
+}
+
+.page-hero-text p {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background:  #5e0259;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary {
+
+background:  #ffa600;
+  color: #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* IMAGE */
+.page-hero-image img {
+  width: 350px;
+  border-radius: 20px;
+}
+
+/* FLOAT ANIMATION */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* Badge */
+.hero-meta span {
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Text block */
+.hero-meta div {
+  line-height: 1.4;
+}
+
+.hero-meta strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hero-meta small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-meta {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-meta div {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .page-hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-actions a {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .page-hero-image img {
+        max-width: 100%;
+    }
+}
